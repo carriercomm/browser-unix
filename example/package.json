@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "build": "browserify browser.js -o static/bundle.js",
+    "min": "browserify browser.js | uglify -cm 2>/dev/null > static/bundle.js",
     "watch": "watchify browser.js -o static/bundle.js -dv"
   }
 }
